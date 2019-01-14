@@ -1,0 +1,37 @@
+<p>
+    home works!
+    Counter : {{currentCount}}
+    Products: {{products}}
+</p>
+<h4>Products Async 1</h4>
+<div *ngFor="let product of products$ | async">
+    {{ product.designation }}
+</div>
+<h4>Products Async 2</h4>
+<div *ngFor="let product of products$ | async">
+    {{ product.designation }}
+</div>
+<table>
+    <tr>
+        <td>
+            Merge Map
+        </td>
+        <td>
+            Cat Name : <input [(ngModel)]="catName" />
+        </td>
+        <td>
+            <button (click)="onMergeMap()">Merge Map</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ForkJoin
+        </td>
+        <td>
+            Cat Name : <input [(ngModel)]="catName" />
+        </td>
+        <td>
+            <button (click)="onForkJoin()">Fork Join</button>
+        </td>
+    </tr>
+</table>
